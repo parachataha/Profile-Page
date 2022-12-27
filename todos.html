@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Todos</h1>
+    </header>
+    <div class="all">
+        <section id="side">
+            <div class="welcome">
+                <img src="/assets/pfp.png" alt="pfp">
+                <h2>Welcome <span class="username">@<span id="name-here">{name}</span></span></h2>
+                <p>Manage your todos here!</p>
+            </div>
+            <div class="explore">
+                <nav>
+                    <h2>Explore...</h2>
+                    <ul>
+                        <li class="active"> <a href="">Home</a> </li>
+                        <li class="badge-new"> <a href="">You</a> </li>
+                        <li class="badge-soon"> <a href="">Friends</a> </li>
+                        <li class="badge-soon"> <a href="">Todos</a> </li>
+                        <li class="badge-soon"> <a href="">Settings</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section id="main-todos">
+            <div class="todos">
+                <form action="" id="search-todos" name="search-todos">
+                    <input type="text" id="search-todos" name="search-todos" placeholder="Search todos...">
+                </form>
+
+                <div class="todos-here">
+                    <ul>
+                        <li>Click me to delete me or do whatever you want with me! </li>
+                        <li>I'm a todo! You can search for me or drag me!</li>
+                    </ul>
+                </div>
+
+                <form action="" id="new-todo" name="new-todo">
+                    <input type="text" id="new-todo" name="input" placeholder="Add new todo...">
+                </form>
+            </div>
+        </section>
+    </div>
+
+        <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: white;
+  padding-bottom: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.badge-new:after {
+  content: "new!";
+  background-color: red;
+  color: white;
+  font-size: 0.5em;
+  padding: 2px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 2px;
+}
+
+.badge-soon:after {
+  content: "coming";
+  background-color: rgb(255, 204, 0);
+  color: white;
+  font-size: 0.5em;
+  padding: 3px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 2px;
+}
+
+div.all {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin: 0px 100px 0px 100px;
+}
+div.all section#side div.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 170, 255, 0.6), rgba(219, 127, 255, 0.6));
+  background-repeat: no-repeat;
+  padding: 20px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+div.all section#side div.welcome img {
+  border-radius: 50%;
+  margin: 0px 75px 0px 75px;
+}
+div.all section#side div.welcome h2 {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  color: white;
+}
+div.all section#side div.welcome p {
+  color: white;
+}
+div.all section#side div.welcome:hover {
+  transform: scale(1.01);
+  transition: 0.5s;
+}
+div.all div.explore {
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+div.all div.explore ul {
+  list-style: none;
+  padding: 0;
+}
+div.all div.explore ul li {
+  background-color: #efefef;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+div.all div.explore ul li a {
+  text-decoration: none;
+  color: black;
+}
+div.all div.explore ul li:hover, div.all div.explore ul .active {
+  background-color: #e7e7e7;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+div.all div.explore ul .active:hover {
+  transform: scale(1);
+  transition: 0.5s;
+  background-color: #efefef;
+}
+div.all section#main {
+  margin: 10px 0px 10px 20px;
+}
+div.all section#main div.notifs {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 15px;
+  transition: width 1s;
+  margin-bottom: 20px;
+}
+div.all section#main div.notifs i#notifs-icon {
+  font-size: 3em;
+  color: #00aaff;
+  animation: color-blue-pink-move 10s alternate infinite, shake 1s infinite alternate;
+}
+div.all section#main div.notifs i#notifs-close {
+  position: absolute;
+  right: 140px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+div.all section#main div.notifs h2 {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+div.all section#main div.notifs a.notifs-button {
+  text-decoration: none;
+  color: #db7fff;
+  border: #db7fff solid 1px;
+  padding: 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+div.all section#main div.notifs a.notifs-button:hover {
+  background-color: #db7fff;
+  color: white;
+  transition: 0.2s;
+  border: #db7fff solid 1px;
+}
+div.all div.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  transition: 1s;
+}
+div.all div.grid div {
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+  border-radius: 15px;
+  transition: width 1s;
+}
+div.all div.grid div.todos {
+  margin-right: 20px;
+}
+
+@keyframes color-blue-pink-move {
+  0% {
+    color: #00aaff;
+  }
+  100% {
+    color: #db7fff;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+section#main-todos {
+  text-align: center;
+  margin: 10px 0px 10px 20px;
+}
+section#main-todos div.todos {
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+}
+section#main-todos div.todos form {
+  display: flex;
+  justify-content: center;
+}
+section#main-todos div.todos form input#new-todo {
+  border: none;
+  padding: 20px;
+  width: 45vw;
+  border-radius: 10px;
+  background-color: #ffffff;
+  text-align: center;
+}
+section#main-todos div.todos form input#search-todos {
+  margin: 10px;
+  border: none;
+  padding: 20px;
+  width: 700px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  text-align: center;
+}
+section#main-todos div.todos div.todos-here {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#main-todos div.todos div.todos-here ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0px 20px 0px;
+  text-align: center;
+}
+section#main-todos div.todos div.todos-here ul li {
+  background-color: #f0f0f0;
+  padding: 20px 10px 20px 10px;
+  width: 45vw;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */

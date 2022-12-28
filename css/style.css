@@ -3,11 +3,96 @@ body {
   padding: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background: white;
-  padding-bottom: 20px;
 }
 
 header {
   text-align: center;
+}
+
+section#sign-in {
+  background-image: url("/assets/login-bg.png");
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+section#sign-in div.decline {
+  margin: 100px;
+}
+section#sign-in div.decline a {
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  border: solid black 1px;
+  padding: 10px;
+  margin: 10px;
+}
+section#sign-in div.decline a:hover {
+  background-color: black;
+  color: white;
+}
+section#sign-in form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#sign-in form p.small {
+  margin: 0px 30vw 0px 30vw;
+  color: rgba(255, 255, 255, 0.276);
+}
+section#sign-in form ::placeholder {
+  color: black;
+}
+section#sign-in form button#submit {
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  width: 100px;
+  margin: 50px;
+  color: white;
+  background-color: #db7fff;
+  cursor: pointer;
+}
+section#sign-in form button#submit:hover {
+  background-color: #cd63f6;
+}
+section#sign-in form input {
+  height: 40px;
+  width: 300px;
+  margin: 5px;
+  border-radius: 50px;
+  border: black 0.5px solid;
+  text-align: center;
+  padding: 10px;
+}
+section#sign-in form label {
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+section#sign-in form div.username {
+  display: flex;
+}
+section#sign-in form div.username input {
+  border-radius: 0px 50px 50px 0px;
+  margin: 0;
+  padding: 0;
+}
+section#sign-in form div.username p {
+  border-radius: 50px 0px 0px 50px;
+  border: 0.5px solid black;
+  border-right: none;
+  height: 31px;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-align: center;
+  padding-top: 9px;
+  background-color: white;
 }
 
 .badge-new:after {
@@ -36,12 +121,14 @@ div.all {
   display: grid;
   grid-template-columns: 30% 70%;
   margin: 0px 100px 0px 100px;
+  height: 0px;
 }
 div.all section#side div.welcome {
   display: flex;
   flex-direction: column;
   justify-items: center;
   text-align: center;
+  justify-items: center;
   background: linear-gradient(to bottom, rgba(0, 170, 255, 0.6), rgba(219, 127, 255, 0.6));
   background-repeat: no-repeat;
   padding: 20px;
@@ -53,6 +140,7 @@ div.all section#side div.welcome {
 div.all section#side div.welcome img {
   border-radius: 50%;
   margin: 0px 75px 0px 75px;
+  width: 10vw;
 }
 div.all section#side div.welcome h2 {
   padding: 0;
@@ -79,23 +167,25 @@ div.all div.explore ul {
   padding: 0;
 }
 div.all div.explore ul li {
+  margin: 20px;
+}
+div.all div.explore ul li a {
+  text-decoration: none;
+  color: black;
   background-color: #efefef;
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
   transition: 0.5s;
   cursor: pointer;
+  display: block;
 }
-div.all div.explore ul li a {
-  text-decoration: none;
-  color: black;
-}
-div.all div.explore ul li:hover, div.all div.explore ul .active {
+div.all div.explore ul li a:hover, div.all div.explore ul li .active {
   background-color: #e7e7e7;
   transform: scale(1.1);
   transition: 0.5s;
 }
-div.all div.explore ul .active:hover {
+div.all div.explore ul li .active:hover {
   transform: scale(1);
   transition: 0.5s;
   background-color: #efefef;

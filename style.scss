@@ -2,11 +2,103 @@ body {
     margin: 0; padding: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: white;
-    padding-bottom: 20px;
 }
 
 header{
     text-align: center;
+}
+
+section#sign-in {
+    background-image: url('/assets/login-bg.png');
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; padding: 0;
+    // padding-top: 40px;
+    // display: none;
+
+    text-align: center;
+
+    div.decline {
+        margin: 100px;
+        a{
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            border: solid black 1px;
+            padding: 10px;
+            margin: 10px;
+
+            &:hover{ 
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // background-color: rgba(0, 0, 0, 0.221);
+
+        p.small {
+            margin: 0px 30vw 0px 30vw;
+            color: rgba(255, 255, 255, 0.276)
+        }
+        
+        ::placeholder {
+            color: black;
+        }
+        button#submit {
+            border: none;
+            border-radius: 20px;
+            height: 50px;
+            width: 100px;
+            margin: 50px;
+            color: white;
+            background-color: #db7fff;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #cd63f6;
+            }
+        }
+        input {
+            height: 40px;
+            width: 300px;
+            margin: 5px;
+            border-radius: 50px;
+            border: black .5px solid;
+            text-align: center;
+            padding: 10px;
+        }
+        label{
+            font-size: 1.5em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+        div.username {
+            display: flex;
+            input {
+                border-radius: 0px 50px 50px 0px;
+                margin: 0; padding: 0;
+            }
+            p{
+                border-radius: 50px 0px 0px 50px;
+                border: .5px solid black;
+                border-right: none;
+                height: 31px;
+                width: 30px;
+                margin: 0; padding: 0;
+                color: black;
+                text-align: center;
+                padding-top: 9px;
+                background-color: white;
+            }
+        }
+    }
 }
 
 .badge-new:after{
@@ -34,6 +126,7 @@ div.all {
     display: grid;
     grid-template-columns: 30% 70%;
     margin: 0px 100px 0px 100px;
+    height: 0px;
 
     section#side {
         div.welcome {
@@ -41,6 +134,7 @@ div.all {
             flex-direction: column;
             justify-items: center;
             text-align: center;
+            justify-items: center;
     
             background: linear-gradient(to bottom, rgba(0, 170, 255, 0.6), rgba(219, 127, 255, .6));
             background-repeat: no-repeat;
@@ -51,6 +145,7 @@ div.all {
             img{
                 border-radius: 50%;
                 margin: 0px 75px 0px 75px;
+                width: 10vw;
             }
             h2{
                 padding: 0; margin: 0;
@@ -79,28 +174,28 @@ div.all {
             padding: 0;
 
             li{
-                background-color: #efefef;
-                padding: 10px;
-                border-radius: 10px;
-                margin: 10px;
-                transition: .5s;
-                cursor: pointer;
+                margin: 20px;
                 a{
                     text-decoration: none;
                     color: black;
+                    background-color: #efefef;
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin: 10px;
+                    transition: .5s;
+                    cursor: pointer;
+                    display: block;
                 }
-            }
-            li:hover, .active{ 
-                background-color: #e7e7e7;
-                transform: scale(1.1);
-                transition: .5s;
-
- 
-            }
-            .active:hover{
-                transform: scale(1);
-                transition: .5s;
-                background-color: #efefef;
+                a:hover, .active{ 
+                    background-color: #e7e7e7;
+                    transform: scale(1.1);
+                    transition: .5s;
+                }
+                .active:hover{
+                    transform: scale(1);
+                    transition: .5s;
+                    background-color: #efefef;
+                }
             }
         }
     }

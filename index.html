@@ -15,18 +15,16 @@
     </header>
     <section id="sign-in">
         <h2>Your escape from Boredom starts now</h2>
+        
         <form class="sign-in-form" action="">
             <label for="name">Username</label>
-            <div class="username">
-                <p>@</p>
-                <input required type="text" name="name" placeholder="yourname123">
-            </div>
+            <input required type="text" name="name" id="name" placeholder="yourname123">
 
             <label for="name">Birthday</label>
             <input required type="date" name="birthday" id="birthday" placeholder="Birthday">
             <button id="submit">Log In</button>
 
-            <p class="small">Don't write @ at the beginning of your username, it is added automatically, doing so will result in two @'s. Please don't put your real name on this site however lying about your age will get you banned.</p>
+            <!-- <p class="small">Don't write @ at the beginning of your username, it is added automatically, doing so will result in two @'s. Please don't put your real name on this site however lying about your age will get you banned.</p> -->
         </form>
     </section>
     <div class="all" id="all">
@@ -40,11 +38,11 @@
                 <nav>
                     <h2>Explore...</h2>
                     <ul>
-                        <li class=""> <a class="" href="/index.html">Home</a> </li>
+                        <li class=""> <a class="mobile-left" href="/index.html">Home</a> </li>
                         <li class="badge-soon"> <a class="" href="">You</a> </li>
                         <li class="badge-soon"> <a class="" href="">Friends</a> </li>
                         <li class="badge-new"> <a class="" href="/todos.html">Todos</a> </li>
-                        <li class=""> <a class="" href="">Settings</a> </li>
+                        <li class=""> <a class="mobile-right" href="">Settings</a> </li>
                     </ul>
                 </nav>
             </div>
@@ -70,6 +68,6 @@
         </section>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="/scripts/app.js"></script>
 </body>
 </html>

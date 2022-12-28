@@ -3,8 +3,9 @@ const allPage = document.querySelector("#all");
 const signInPage = document.querySelector("section#sign-in")
 const signInForm = {
     form: document.querySelector('#sign-in > form'),
-    username: document.querySelector('#sign-in > form > div.username > input'),
-    birthday: document.querySelector("input#birthday")
+    username: document.querySelector('#sign-in > form input#name'),
+    birthday: document.querySelector("input#birthday"),
+    accessDeniedButton: document.querySelector("#sign-in > div > a")
 }
 
 let declinedPageTemp = (minAge) => 
@@ -30,6 +31,8 @@ signInForm.form.addEventListener('submit', e => {
 
         localStorage.setItem('birthday', birthday);
         localStorage.setItem('allowedIn', true);
+
+        signInPage.style.display = 'none';
     } else {
         console.log('NOT allowed in')
         localStorage.setItem('allowedIn', false);
@@ -38,6 +41,7 @@ signInForm.form.addEventListener('submit', e => {
     }
 })
 
+// allowed in check
 if (localStorage.getItem('allowedIn')) {
     console.log('localStorage saved and allowed in');
 
@@ -45,6 +49,9 @@ if (localStorage.getItem('allowedIn')) {
     signInPage.style.display = 'none';
 } else {
     console.log('localStorage saved BUT NOT ALLOWED IN')
+
+    allPage.style.display = 'none';
+    signInPage.style.height = 'auto';
 }
 
 // MAIN PAGE
@@ -62,10 +69,8 @@ if(localStorage.getItem('pref-HideNotif')){
     notifsDiv.div.style.display = 'none';
 }
 
-// TODOS PAGE
-// const addTodos = document.querySelector('form');
+// INSERTING DATA
+const insertName = document.querySelectorAll('#name-here');
 
-// addTodos.addEventListener('submit', e =>{
-//     e.preventDefault();
-//     console.log('hi');
-// })
+insertName.innerHTML = localStorage.getItem('username').toLowerCase;
+console.log(localStorage.getItem('username'))

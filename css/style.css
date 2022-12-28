@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap");
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Inter", sans-serif;
   background: white;
 }
 
@@ -22,6 +23,9 @@ section#sign-in {
 section#sign-in div.decline {
   margin: 100px;
 }
+section#sign-in div.decline p {
+  margin-bottom: 20px;
+}
 section#sign-in div.decline a {
   color: black;
   text-decoration: none;
@@ -29,19 +33,27 @@ section#sign-in div.decline a {
   border: solid black 1px;
   padding: 10px;
   margin: 10px;
+  margin-top: 40px;
 }
 section#sign-in div.decline a:hover {
   background-color: black;
   color: white;
 }
 section#sign-in form {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: rgba(237, 237, 237, 0.492);
+  margin: 0px 30px 0px 30px;
+  border-radius: 15px;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 section#sign-in form p.small {
-  margin: 0px 30vw 0px 30vw;
-  color: rgba(255, 255, 255, 0.276);
+  margin: 0px 35vw 0px 5vw;
+  color: rgba(96, 96, 96, 0.276);
+  text-align: center;
 }
 section#sign-in form ::placeholder {
   color: black;
@@ -51,7 +63,7 @@ section#sign-in form button#submit {
   border-radius: 20px;
   height: 50px;
   width: 100px;
-  margin: 50px;
+  margin: 10px;
   color: white;
   background-color: #db7fff;
   cursor: pointer;
@@ -60,39 +72,23 @@ section#sign-in form button#submit:hover {
   background-color: #cd63f6;
 }
 section#sign-in form input {
-  height: 40px;
-  width: 300px;
+  height: 50px;
+  width: 400px;
   margin: 5px;
+  margin-bottom: 10px;
   border-radius: 50px;
   border: black 0.5px solid;
   text-align: center;
   padding: 10px;
 }
 section#sign-in form label {
-  font-size: 1.5em;
-  margin-top: 40px;
-  margin-bottom: 15px;
+  font-size: 1.3em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-section#sign-in form div.username {
-  display: flex;
-}
-section#sign-in form div.username input {
-  border-radius: 0px 50px 50px 0px;
-  margin: 0;
-  padding: 0;
-}
-section#sign-in form div.username p {
-  border-radius: 50px 0px 0px 50px;
-  border: 0.5px solid black;
-  border-right: none;
-  height: 31px;
-  width: 30px;
-  margin: 0;
-  padding: 0;
-  color: black;
-  text-align: center;
-  padding-top: 9px;
-  background-color: white;
+section#sign-in form input#name:after {
+  content: "Please do not use your real name";
+  position: absolute;
 }
 
 .badge-new:after {
@@ -139,8 +135,9 @@ div.all section#side div.welcome {
 }
 div.all section#side div.welcome img {
   border-radius: 50%;
-  margin: 0px 75px 0px 75px;
-  width: 10vw;
+  margin: 0px auto 0px auto;
+  width: 11vw;
+  padding: 0 10px 0 0;
 }
 div.all section#side div.welcome h2 {
   padding: 0;
@@ -315,4 +312,44 @@ section#main-todos div.todos div.todos-here ul li {
   cursor: pointer;
   margin: 10px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  div.all {
+    display: block;
+    gap: 0px;
+  }
+  div.all div.explore {
+    display: flex;
+    justify-content: center;
+  }
+  div.all div.explore ul {
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+  }
+  div.all div.explore ul li {
+    margin: 0;
+  }
+  div.all div.explore ul li a {
+    margin: 0;
+    border-radius: 0px;
+  }
+  div.all div.explore ul li:after {
+    display: none;
+  }
+  div.all div.explore ul a.mobile-left {
+    border-radius: 20px 0px 0px 20px;
+  }
+  div.all div.explore ul a.mobile-right {
+    border-radius: 0px 20px 20px 0px;
+  }
+  section#main {
+    margin: 0px;
+    padding: 0px;
+  }
+  section#main div.grid {
+    padding: 0;
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,10 @@
+// INSERTING DATA
+const insertName = document.querySelectorAll('#name-here');
+
+insertName.forEach(nameHere => {
+    nameHere.innerHTML = localStorage.getItem('username');
+})
+
 // SIGN IN PAGE
 const allPage = document.querySelector("#all");
 const signInPage = document.querySelector("section#sign-in")
@@ -20,7 +27,6 @@ signInForm.form.addEventListener('submit', e => {
     
     let username = signInForm.username.value;
     let birthday =  signInForm.birthday.valueAsDate;
-    localStorage.setItem('username', username);
 
     let minAge = new Date('january 1 2009');
 
@@ -30,6 +36,7 @@ signInForm.form.addEventListener('submit', e => {
 
         localStorage.setItem('birthday', birthday);
         localStorage.setItem('allowedIn', true);
+        localStorage.setItem('username', username);
 
         signInPage.style.display = 'none';
     } else {
@@ -67,12 +74,3 @@ notifsDiv.close.addEventListener('click', e => {
 if(localStorage.getItem('pref-HideNotif')){
     notifsDiv.div.style.display = 'none';
 }
-
-// INSERTING DATA
-const insertName = document.querySelectorAll('#name-here');
-
-console.log(insertName)
-
-insertName.forEach(nameHere => {
-    nameHere.innerHTML = localStorage.getItem('username').toLowerCase();
-})

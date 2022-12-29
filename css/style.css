@@ -155,6 +155,12 @@ div.all section#side div.welcome:hover {
   transform: scale(1.01);
   transition: 0.5s;
 }
+div.all section#side div.welcome i.edit-icon {
+  font-size: 2em;
+  color: white;
+  margin: 10px;
+  position: absolute;
+}
 div.all div.explore {
   background-color: #f8f8f8;
   padding: 10px;
@@ -276,6 +282,7 @@ div.modal-todos {
   backdrop-filter: blur(15px);
   margin: 0;
   padding: 0;
+  z-index: 10;
 }
 div.modal-todos div.content {
   background-color: rgba(255, 255, 255, 0.386);

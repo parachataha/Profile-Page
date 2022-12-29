@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Todos</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/9425ddec43.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="icon" type="image/x-icon" href="/assets/pfp.png">
 </head>
 <body>
     <div class="modal-todos">
@@ -23,10 +25,11 @@
     <header>
         <h1>Your Todos</h1>
     </header>
-    
+
     <div class="all">
         <section id="side">
             <div class="welcome">
+                <i OnClick=" location.href='settings.html' " class="edit-icon fa-regular fa-pen-to-square"></i>
                 <img src="/assets/pfp.png" alt="pfp">
                 <h2>Welcome <span class="username">@<span id="name-here">{name}</span></span></h2>
                 <p>Manage your todos here!</p>
@@ -39,7 +42,7 @@
                         <li class="badge-soon"> <a class="" href="">You</a> </li>
                         <li class="badge-soon"> <a class="" href="">Friends</a> </li>
                         <li class="badge-new"> <a class="" href="/todos.html">Todos</a> </li>
-                        <li> <a class="mobile-right" href="">Settings</a> </li>
+                        <li> <a class="mobile-right" href="/settings.html">Settings</a> </li>
                     </ul>
                 </nav>
             </div>

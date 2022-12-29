@@ -2,7 +2,7 @@
 const insertName = document.querySelectorAll('#name-here');
 
 insertName.forEach(nameHere => {
-    nameHere.innerHTML = localStorage.getItem('username').toLowerCase();
+    nameHere.innerHTML = localStorage.getItem('username');
 })
 
 // TODOS PAGE
@@ -101,3 +101,10 @@ search.addEventListener('submit', e => {
     e.preventDefault();
 })
 
+// add when refresh
+for(let i = 1; i <= +localStorage.getItem('todoNo'); i++ ){
+  let currTodo = localStorage.getItem(`todo #${i}`);
+
+  generateTemplate(String(currTodo), i)
+  console.log(currTodo, i)
+}

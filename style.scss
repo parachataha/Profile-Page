@@ -109,6 +109,8 @@ section#sign-in {
     border-radius: 5px;
     position: absolute;
     margin-left: 2px;
+
+    display: none;
 }
 .badge-soon:after{
     content: 'coming';
@@ -119,13 +121,17 @@ section#sign-in {
     border-radius: 5px;
     position: absolute;
     margin-left: 2px;
+
+    display: none;
 }
+
 
 div.all {
     display: grid;
     grid-template-columns: 30% 70%;
-    margin: 0px 100px 0px 100px;
+    margin: 0px 5vw 0px 5vw;
     height: 0px;
+    gap: 0px;
 
     section#side {
         div.welcome {
@@ -275,6 +281,48 @@ div.all {
 }
 
 // TODOS 
+div.modal-todos {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    backdrop-filter: blur(15px);
+    margin: 0; padding: 0;
+
+    div.content {
+        background-color: rgba(255, 255, 255, 0.386);
+        margin: 5vw;
+        padding: 10vw 2vw 10vw 2vw;
+        border-radius: 15px;
+        border: 2px white solid;
+        color: white;
+        transition: .5s;
+        
+        h2{
+            font-size: 3em;
+        }
+        p{
+            font-size: 1.5em;
+        }
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 1vw;
+            font-size: 1.5em;
+            background-image: linear-gradient(45deg, #de71ff, #fc63ff);
+            transition: .2s;
+            color: white;
+            cursor: pointer;
+
+            &:hover{
+                background-image: linear-gradient(45deg, #9b40b6, #cd50cf);
+                transform: scale(1.1);
+                transition: .2s;
+            }
+        }
+    }
+}
 
 section#main-todos {
     text-align: center;
@@ -331,6 +379,10 @@ section#main-todos {
 }
 
 @media screen and (max-width: 600px) {
+    h1:after{
+        display: none;
+    }
+
     div.all {
         display: block;
         gap: 0px;
@@ -342,12 +394,14 @@ section#main-todos {
                 display: flex;
                 flex-direction: row;
                 border-radius: 15px;
+                margin: 0px 10px 30px 10px;
 
                 li{
                     margin: 0;
                     a{
                         margin: 0;
                         border-radius: 0px;
+                        font-size: .9em;
                     }
                 }
                 li:after{
@@ -364,13 +418,37 @@ section#main-todos {
         }
     }
 
+    section#side {
+        margin: 0; padding: 0;
+
+        div.welcome {
+            margin: 0; padding: 0;
+        }
+        div.explore {
+            margin: 0; padding: 0;
+        }
+    }
+
     section#main {
-        
+
+        display: block;
         margin: 0px;
         padding: 0px;
+        padding-right: 2.5vw;
+
         div.grid{
             padding: 0;
             margin: 0;
         }
     }
+}
+
+.delete{
+    cursor: pointer;
+    float: right;
+    margin-right: 0.2vw;
+}
+
+.filtered{
+    display: none !important;
 }

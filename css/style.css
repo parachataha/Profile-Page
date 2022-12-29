@@ -100,6 +100,7 @@ section#sign-in form input#name:after {
   border-radius: 5px;
   position: absolute;
   margin-left: 2px;
+  display: none;
 }
 
 .badge-soon:after {
@@ -111,13 +112,15 @@ section#sign-in form input#name:after {
   border-radius: 5px;
   position: absolute;
   margin-left: 2px;
+  display: none;
 }
 
 div.all {
   display: grid;
   grid-template-columns: 30% 70%;
-  margin: 0px 100px 0px 100px;
+  margin: 0px 5vw 0px 5vw;
   height: 0px;
+  gap: 0px;
 }
 div.all section#side div.welcome {
   display: flex;
@@ -264,6 +267,47 @@ div.all div.grid div.todos {
     transform: rotateZ(10deg);
   }
 }
+div.modal-todos {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  margin: 0;
+  padding: 0;
+}
+div.modal-todos div.content {
+  background-color: rgba(255, 255, 255, 0.386);
+  margin: 5vw;
+  padding: 10vw 2vw 10vw 2vw;
+  border-radius: 15px;
+  border: 2px white solid;
+  color: white;
+  transition: 0.5s;
+}
+div.modal-todos div.content h2 {
+  font-size: 3em;
+}
+div.modal-todos div.content p {
+  font-size: 1.5em;
+}
+div.modal-todos div.content button {
+  border: none;
+  border-radius: 10px;
+  padding: 1vw;
+  font-size: 1.5em;
+  background-image: linear-gradient(45deg, #de71ff, #fc63ff);
+  transition: 0.2s;
+  color: white;
+  cursor: pointer;
+}
+div.modal-todos div.content button:hover {
+  background-image: linear-gradient(45deg, #9b40b6, #cd50cf);
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
 section#main-todos {
   text-align: center;
   margin: 10px 0px 10px 20px;
@@ -315,6 +359,9 @@ section#main-todos div.todos div.todos-here ul li {
 }
 
 @media screen and (max-width: 600px) {
+  h1:after {
+    display: none;
+  }
   div.all {
     display: block;
     gap: 0px;
@@ -327,6 +374,7 @@ section#main-todos div.todos div.todos-here ul li {
     display: flex;
     flex-direction: row;
     border-radius: 15px;
+    margin: 0px 10px 30px 10px;
   }
   div.all div.explore ul li {
     margin: 0;
@@ -334,6 +382,7 @@ section#main-todos div.todos div.todos-here ul li {
   div.all div.explore ul li a {
     margin: 0;
     border-radius: 0px;
+    font-size: 0.9em;
   }
   div.all div.explore ul li:after {
     display: none;
@@ -344,12 +393,35 @@ section#main-todos div.todos div.todos-here ul li {
   div.all div.explore ul a.mobile-right {
     border-radius: 0px 20px 20px 0px;
   }
+  section#side {
+    margin: 0;
+    padding: 0;
+  }
+  section#side div.welcome {
+    margin: 0;
+    padding: 0;
+  }
+  section#side div.explore {
+    margin: 0;
+    padding: 0;
+  }
   section#main {
+    display: block;
     margin: 0px;
     padding: 0px;
+    padding-right: 2.5vw;
   }
   section#main div.grid {
     padding: 0;
     margin: 0;
   }
+}
+.delete {
+  cursor: pointer;
+  float: right;
+  margin-right: 0.2vw;
+}
+
+.filtered {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

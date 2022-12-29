@@ -8,11 +8,22 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
+    <div class="modal-todos">
+        <div class="content">
+            <h2>Welcome to your todos!</h2>
+            <p>To get started, click the button below. This allows local cookies to be stored on your device</p>
+
+            <button id="modal-todos-close">Start</button>
+        </div>
+    </div>
+
     <header>
         <h1>Your Todos</h1>
     </header>
+    
     <div class="all">
         <section id="side">
             <div class="welcome">
@@ -41,13 +52,15 @@
 
                 <div class="todos-here">
                     <ul>
-                        <li>Click me to delete me or do whatever you want with me! </li>
-                        <li>I'm a todo! You can search for me or drag me!</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>I'm a todo, click the trash icon to delete me.</span>
+                            <i class="far fa-trash-alt delete"></i>
+                          </li>
                     </ul>
                 </div>
 
                 <form action="" id="new-todo" name="new-todo">
-                    <input type="text" id="new-todo" name="input" placeholder="Add new todo...">
+                    <input type="text" id="new-todo" name="add" placeholder="Add new todo...">
                 </form>
             </div>
         </section>

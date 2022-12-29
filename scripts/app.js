@@ -13,7 +13,6 @@ let declinedPageTemp = (minAge) =>
     <div class='decline'>
         <h2>Access Denied</h2>
         <p>Sorry! But your too young to be on this website. Please try again when your older. You need to be born after ${minAge}. but you're born at ${birthday}</p>
-        <a href='/index.html'>Back</a>
     </div>`;
 
 signInForm.form.addEventListener('submit', e => {

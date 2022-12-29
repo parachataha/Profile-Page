@@ -71,5 +71,8 @@ if(localStorage.getItem('pref-HideNotif')){
 // INSERTING DATA
 const insertName = document.querySelectorAll('#name-here');
 
-insertName.innerHTML = localStorage.getItem('username').toLowerCase;
-console.log(localStorage.getItem('username'))
+console.log(insertName)
+
+insertName.forEach(nameHere => {
+    nameHere.innerHTML = localStorage.getItem('username').toLowerCase();
+})

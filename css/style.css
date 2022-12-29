@@ -22,8 +22,15 @@ section#sign-in {
 }
 section#sign-in div.decline {
   margin: 100px;
+  height: 100vh;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+section#sign-in div.decline h2 {
+  font-size: 3em;
+  color: black;
 }
 section#sign-in div.decline p {
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 section#sign-in div.decline a {
@@ -38,6 +45,9 @@ section#sign-in div.decline a {
 section#sign-in div.decline a:hover {
   background-color: black;
   color: white;
+}
+section#sign-in div.decline span.dates {
+  color: #8f00be;
 }
 section#sign-in form {
   padding-top: 10vh;

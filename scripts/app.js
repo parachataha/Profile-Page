@@ -19,7 +19,7 @@ let declinedPageTemp = (minAge) =>
     signInPage.innerHTML = `
     <div class='decline'>
         <h2>Access Denied</h2>
-        <p>Sorry! But your too young to be on this website. Please try again when your older. You need to be born after ${minAge}. but you're born at ${birthday}</p>
+        <p>Sorry! But your too young to be on this website. Please try again when your older. You need to be born after <span class='dates'>${String(minAge)}</span>. but you're born at <span class='dates'>${String(birthday.value)}</span></p>
     </div>`;
 
 signInForm.form.addEventListener('submit', e => {
@@ -48,7 +48,7 @@ signInForm.form.addEventListener('submit', e => {
 })
 
 // allowed in check
-if (localStorage.getItem('allowedIn')) {
+if (localStorage.getItem('allowedIn') === 'true') {
     console.log('localStorage saved and allowed in');
 
     allPage.style.height = 'auto';

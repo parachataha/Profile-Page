@@ -82,8 +82,8 @@ section#sign-in form button#submit:hover {
   background-color: #cd63f6;
 }
 section#sign-in form input {
-  height: 50px;
-  width: 400px;
+  height: 10vw;
+  width: 0vw;
   margin: 5px;
   margin-bottom: 10px;
   border-radius: 50px;

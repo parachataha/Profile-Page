@@ -27,7 +27,7 @@ const list = document.querySelector("#main-todos > div > div > ul");
 
 const generateTemplate = (todo, todoNo) => {
     const html = `
-      <li class="todo" id="todo ${todoNo}">
+      <li class="todo" id="todo #${todoNo}">
         <span>${todo}</span>
         <i class="far fa-trash-alt delete" id="${todoNo}"></i>
       </li>
@@ -57,6 +57,7 @@ addForm.addEventListener('submit', e => {
   
     e.preventDefault();
     const todo = addForm.add.value.trim();
+    let todoArray = [];
   
     if(todo.length){
         generateTemplate(todo, localStorage.getItem('todoNo'));
@@ -67,26 +68,31 @@ addForm.addEventListener('submit', e => {
         todoNo = todoNo + 1
 
         localStorage.setItem(`todo #${todoNo}`, todo);
-
         localStorage.setItem('todoNo', todoNo);
+
+        todoArray[todoN] = todo;
+        console.log(todoArray);
+        localStorage.setItem('todoArray', String(todoArray))
     }
+
   });
 
-  
-//   if(localStorage.getItem('todoNo')) {
-
-//   } else {
-//     console.log('im empty');
-//   }
 
   // delete todos event
-list.addEventListener('click', e => {
+list.addEventListener('click', (e) => {
 
     if(e.target.classList.contains('delete')){
       e.target.parentElement.remove();
+
+      let currTodo = e.target.id;
+      console.log(currTodo);
+      localStorage.removeItem(`todo #${currTodo}`);
+      
+      let totalTodos = +localStorage.getItem('todoNo');
+      totalTodos = totalTodos - 1;
     }
   
-  });
+});
 
 // filter todos event
 search.addEventListener('keyup', (e) => {
@@ -105,6 +111,7 @@ search.addEventListener('submit', e => {
 for(let i = 1; i <= +localStorage.getItem('todoNo'); i++ ){
   let currTodo = localStorage.getItem(`todo #${i}`);
 
-  generateTemplate(String(currTodo), i)
-  console.log(currTodo, i)
+  if (currTodo !== null) {
+    generateTemplate(String(currTodo), i)
+  }
 }
